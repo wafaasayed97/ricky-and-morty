@@ -38,6 +38,5 @@ class AppRouter {
                   ),
                 ));
     }
-    return null;
   }
 }

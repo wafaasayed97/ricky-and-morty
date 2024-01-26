@@ -18,7 +18,7 @@ class CharacterError extends CharacterState {
   final String errorMessage;
 
   CharacterError(this.errorMessage);
-
+@override
   List<Object> get props =>
       [errorMessage]; // Implement if needed for state equality
 

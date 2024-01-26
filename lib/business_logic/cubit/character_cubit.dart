@@ -19,7 +19,7 @@ class CharacterCubit extends Cubit<CharacterState> {
       final characters = await characterRepository.getAllCharacter();
       emit(CharacterLoaded(characters));
       this.characters = characters;
-      log(characters as String);
+      print(characters );
       return characters;
     } catch (error) {
       // Handle error if the repository call fails
@@ -31,7 +31,7 @@ class CharacterCubit extends Cubit<CharacterState> {
     try {
       final quote = await characterRepository.getCharacterQuote(charName);
       emit(QuotesLoaded(quote));
-      log(quote as String);
+      print(quote );
     } catch (error) {
       // Handle error if the repository call fails
       emit(CharacterError(error.toString()));
